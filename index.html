@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shenbagabalaji A — Data Science & Software</title>
+<meta name="description" content="Portfolio of Shenbagabalaji A, B.Tech CSE (Data Science) at VIT Chennai.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2f5f7;--surface:#fff;--ink:#14202b;--muted:#51606d;--line:#d5dde3;--accent:#0b6b6b;--accent-ink:#fff;--hi:#e3a31b;--code-bg:#14202b;--code-ink:#d9e6ee;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e161d;--surface:#16212b;--ink:#e8eef2;--muted:#9fb0bd;--line:#26343f;--accent:#4fc3b8;--accent-ink:#06201e;--hi:#f0b93a;--code-bg:#0a1015;--code-ink:#d9e6ee}}
+:root[data-theme="dark"]{--bg:#0e161d;--surface:#16212b;--ink:#e8eef2;--muted:#9fb0bd;--line:#26343f;--accent:#4fc3b8;--accent-ink:#06201e;--hi:#f0b93a;--code-bg:#0a1015;--code-ink:#d9e6ee}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 "IBM Plex Sans",system-ui,-apple-system,Segoe UI,sans-serif}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.1;margin:0}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+nav b{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.1rem;white-space:nowrap}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:.95rem;overflow-x:auto}
+nav ul a{text-decoration:none;color:var(--muted);white-space:nowrap}
+nav ul a:hover{color:var(--ink)}
+.hero{padding:72px 0 56px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr 1fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(2.6rem,7vw,4.6rem);font-weight:800;letter-spacing:-.03em}
+.hero p.lead{font-size:1.2rem;color:var(--muted);max-width:34ch;margin:20px 0 28px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:12px 20px;border-radius:8px;font-weight:500;text-decoration:none;border:1.5px solid var(--ink)}
+.btn.p{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn:hover{transform:translateY(-1px)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+section{padding:64px 0;border-top:1px solid var(--line)}
+section h2{font-size:clamp(1.8rem,4vw,2.4rem);font-weight:700;letter-spacing:-.02em;margin-bottom:28px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.about p{margin:0 0 14px;max-width:62ch}
+.facts{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.facts li{padding-left:16px;border-left:3px solid var(--accent)}
+.facts small{display:block;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:26px;display:flex;flex-direction:column;gap:12px}
+.card h3{font-size:1.35rem}
+.card p{margin:0;color:var(--muted)}
+.card ul{margin:0;padding-left:18px;color:var(--muted)}
+.card li{margin-bottom:6px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:6px}
+.tag{font:400 .8rem "IBM Plex Mono",monospace;padding:3px 9px;border-radius:99px;background:color-mix(in srgb,var(--accent) 12%,transparent);color:var(--accent)}
+.metric{font:500 .9rem "IBM Plex Mono",monospace;color:var(--ink)}
+.metric span{background:color-mix(in srgb,var(--hi) 35%,transparent);padding:1px 6px;border-radius:4px}
+.tl{list-style:none;margin:0;padding:0 0 0 26px;border-left:2px solid var(--line)}
+.tl li{position:relative;padding-bottom:34px}
+.tl li::before{content:"";position:absolute;left:-34px;top:8px;width:14px;height:14px;border-radius:50%;background:var(--accent);border:3px solid var(--bg)}
+.tl h3{font-size:1.2rem}
+.tl .when{font:400 .85rem "IBM Plex Mono",monospace;color:var(--muted);margin:4px 0 8px}
+.tl ul{margin:0;padding-left:18px;color:var(--muted);max-width:68ch}
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:22px 40px}
+.skills h3{font-size:1.05rem;margin-bottom:8px}
+.skills .tags{margin:0;padding:0}
+.certs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.certs .card{gap:4px}
+.certs b{font-family:"Bricolage Grotesque",sans-serif;font-size:1.5rem;color:var(--accent)}
+.ach{margin:0;padding:0;list-style:none;display:grid;gap:12px;max-width:72ch}
+.ach li{padding-left:16px;border-left:3px solid var(--hi)}
+.contact{text-align:left}
+.contact p{color:var(--muted);max-width:52ch;margin:0 0 24px}
+footer{padding:28px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+@media (max-width:820px){.hero .wrap,.about,.grid,.skills,.certs{grid-template-columns:1fr}.hero{padding-top:44px}nav ul{gap:16px}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><b>Shenbagabalaji A</b>
+<ul><li><a href="#about">About</a></li><li><a href="#projects">Projects</a></li><li><a href="#experience">Experience</a></li><li><a href="#skills">Skills</a></li><li><a href="#contact">Contact</a></li></ul></div></nav>
+
+<header class="hero"><div class="wrap">
+<div>
+<h1>Shenbagabalaji A</h1>
+<p class="lead">I build data pipelines, machine learning models and full-stack apps, and turn the results into decisions people can act on.</p>
+<div class="btns">
+<a class="btn p" href="#projects">See my projects</a>
+<a class="btn" href="https://github.com/shenal19" target="_blank" rel="noopener">GitHub</a>
+<a class="btn" href="https://www.linkedin.com/in/shenbaga-balaji-6b4b8228a/" target="_blank" rel="noopener">LinkedIn</a>
+</div></div>
+<aside class="card snap" aria-label="Quick facts">
+<h3>At a glance</h3>
+<ul class="facts">
+<li>B.Tech CSE (Data Science)<small>VIT Chennai</small></li>
+<li>Works with<small>Python, Java, SQL, AWS, machine learning</small></li>
+<li>Certified<small>AWS Solutions Architect Associate (2026)</small></li>
+</ul></aside>
+</div></header>
+
+<main>
+<section id="about"><div class="wrap">
+<h2>About</h2>
+<div class="about">
+<div>
+<p>I'm a final-year B.Tech student in Computer Science and Engineering (Data Science) at VIT Chennai. I like projects where careful data work and solid engineering meet: clean the data, build the model or the app, and show the result clearly.</p>
+<p>I've built full-stack applications, ETL pipelines and machine learning models through academic projects and internships. I'm looking for opportunities to contribute to meaningful projects while growing as a software and data professional.</p>
+</div>
+<ul class="facts">
+<li>B.Tech CSE (Data Science), 2023 to present<small>Vellore Institute of Technology, Chennai</small></li>
+<li>Core stack<small>Java, Python, SQL, AWS</small></li>
+<li>Certified<small>AWS Solutions Architect Associate, OCI Generative AI Professional, IBM Data Science with Python</small></li>
+</ul>
+</div></div></section>
+
+<section id="projects"><div class="wrap">
+<h2>Projects</h2>
+<div class="grid">
+<article class="card">
+<h3>High-Concurrency Ticket Booking Platform</h3>
+<p>A full-stack booking platform with JWT authentication, role-based access control and multi-tenant event management.</p>
+<ul><li>Transaction-safe seat reservations with TTL expiry and concurrency control, so the same seat is never booked twice.</li></ul>
+<div class="tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Node.js</span><span class="tag">PostgreSQL</span><span class="tag">Prisma</span></div>
+</article>
+<article class="card">
+<h3>Drift-Aware Antibiotic Resistance Prediction</h3>
+<p>An XGBoost pipeline with a 3-way, time-based train, validation and test split, plus data drift monitoring with Population Stability Index (PSI).</p>
+<ul><li>Predictions explained with SHAP and shown in a Streamlit dashboard of resistance risk.</li></ul>
+<div class="tags"><span class="tag">Python</span><span class="tag">XGBoost</span><span class="tag">Scikit-learn</span><span class="tag">SHAP</span><span class="tag">Streamlit</span></div>
+</article>
+<article class="card">
+<h3>Netflix Analytics & Recommendation Platform</h3>
+<p>Python ETL pipelines that load 50,000+ records into PostgreSQL, with Power BI dashboards covering recommendation, churn, engagement and revenue.</p>
+<p class="metric"><span>70%</span> faster analysis turnaround after automating manual reporting</p>
+<div class="tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">PostgreSQL</span><span class="tag">Power BI</span></div>
+</article>
+<article class="card">
+<h3>CCTV Violence Detection</h3>
+<p>A video violence-detection system built on an R(2+1)D-18 CNN fine-tuned on RWF-2000, with temporal confidence and input-quality gating to stabilize predictions. I contributed to this team project.</p>
+<p class="metric"><span>83.8%</span> accuracy · <span>83.9%</span> F1 · <span>0.927</span> AUC, tested on Hockey Fights and RLVS</p>
+<div class="tags"><span class="tag">PyTorch</span><span class="tag">OpenCV</span><span class="tag">Deep Learning</span></div>
+</article>
+</div></div></section>
+
+<section id="experience"><div class="wrap">
+<h2>Experience</h2>
+<ol class="tl">
+<li><h3>Data Science with Python Trainee · Skillumni</h3><div class="when">Mar 2026 – May 2026</div>
+<ul><li>Completed a 3-month Python and SQL analytics program, cleaning and validating datasets before modeling.</li><li>Delivered a SQL-based analytics capstone combining data analysis, visualization and machine learning.</li></ul></li>
+<li><h3>STEP Master Data Management Intern · ISNIA Technologies</h3><div class="when">Jun 2025 – Jul 2025</div>
+<ul><li>Validated and transformed 100+ product records using Stibo STEP MDM across enterprise master data workflows.</li><li>Found and resolved data inconsistencies, improving accuracy, consistency and integrity.</li></ul></li>
+<li><h3>Data Analysis Trainee · Coincent.ai</h3><div class="when">Jun 2024 – Jul 2024</div>
+<ul><li>Analyzed housing-market data with Pandas, Matplotlib and Seaborn, using correlation and regression to isolate key price drivers.</li><li>Built preprocessing, exploratory analysis and visualization workflows for structured datasets.</li></ul></li>
+</ol></div></section>
+
+<section id="skills"><div class="wrap">
+<h2>Skills</h2>
+<div class="skills">
+<div><h3>Programming & Databases</h3><div class="tags"><span class="tag">Python</span><span class="tag">Java</span><span class="tag">SQL</span><span class="tag">R</span><span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">DynamoDB</span><span class="tag">Pandas</span><span class="tag">NumPy</span></div></div>
+<div><h3>Machine Learning</h3><div class="tags"><span class="tag">Regression</span><span class="tag">XGBoost</span><span class="tag">Scikit-learn</span><span class="tag">PyTorch</span><span class="tag">OpenCV</span><span class="tag">Deep Learning</span><span class="tag">SHAP</span></div></div>
+<div><h3>BI & Visualization</h3><div class="tags"><span class="tag">Power BI</span><span class="tag">Tableau</span><span class="tag">Matplotlib</span><span class="tag">Seaborn</span><span class="tag">Streamlit</span></div></div>
+<div><h3>Data Accuracy & Reporting</h3><div class="tags"><span class="tag">Data Validation</span><span class="tag">Data Quality</span><span class="tag">ETL</span><span class="tag">Reporting Automation</span><span class="tag">Stibo STEP MDM</span><span class="tag">MS Excel</span></div></div>
+<div><h3>Data & Product Analytics</h3><div class="tags"><span class="tag">Product Analytics</span><span class="tag">KPI Analysis</span><span class="tag">Statistical Analysis</span><span class="tag">Data Visualization</span></div></div>
+<div><h3>Cloud & Tools</h3><div class="tags"><span class="tag">AWS</span><span class="tag">Oracle Cloud Infrastructure</span><span class="tag">Git</span><span class="tag">GitHub</span></div></div>
+</div></div></section>
+
+<section id="certs"><div class="wrap">
+<h2>Certifications</h2>
+<div class="certs">
+<div class="card"><b>2026</b><span>AWS Certified Solutions Architect – Associate</span></div>
+<div class="card"><b>2025</b><span>Oracle Cloud Infrastructure Generative AI Professional</span></div>
+<div class="card"><b>2025</b><span>IBM Data Science with Python</span></div>
+</div></div></section>
+
+<section id="achievements"><div class="wrap">
+<h2>Achievements & Leadership</h2>
+<ul class="ach">
+<li>Contributor, Smart India Hackathon 2025: AI-Powered Tourism Platform.</li>
+<li>Contributor, GlitchCon 2025, a 24-hour hackathon (ECDS & VITAA).</li>
+<li>Operations Team Leader, Music Club, VIT Chennai (Jun 2024 – Aug 2025): coordinated event logistics across cross-functional teams.</li>
+<li>Represented Dindigul District and clubs in TNCA state-level cricket tournaments (U-14, U-16, U-19).</li>
+</ul></div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+<h2>Contact</h2>
+<p>I'm open to software, data and AI roles. Email me or find me on LinkedIn and GitHub.</p>
+<div class="btns">
+<a class="btn p" href="mailto:shenal19406@gmail.com">shenal19406@gmail.com</a>
+<a class="btn" href="https://www.linkedin.com/in/shenbaga-balaji-6b4b8228a/" target="_blank" rel="noopener">LinkedIn</a>
+<a class="btn" href="https://github.com/shenal19" target="_blank" rel="noopener">GitHub</a>
+</div></div></section>
+</main>
+<footer><div class="wrap">© 2026 Shenbagabalaji A</div></footer>
+</body>
+</html>
